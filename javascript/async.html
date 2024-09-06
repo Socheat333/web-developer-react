@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getUser(){
+            fetch("https://api.escuelajs.co/api/v1/users")
+            .then(users => users.json())
+            .then(users => console.log(users))
+        }
+        function getProducts(){
+            fetch("https://api.escuelajs.co/api/v1/products")
+            .then(products => products.json())
+            .then(products => console.log(products))
+        }
+        console.log('get User : ', getUser())
+        console.log('get Products : ', getProducts())
+    </script>
+</body>
+</html>
